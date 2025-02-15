@@ -1,0 +1,300 @@
+/* General Styles */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #222; /* Dark background */
+  color: #fff; /* Light text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Login Page Styles */
+.login-container {
+  background-color: #333; /* Slightly lighter container */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 400px;
+  position: relative; /* For absolute positioning of the icon */
+}
+
+.login-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: #eee;
+}
+
+.login-container h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #eee;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #555;
+  border-radius: 20px; /* Rounded input fields */
+  background-color: #444;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #777;
+  outline: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  background-color: #e67e22; /* Orange button */
+  color: white;
+  border: none;
+  border-radius: 20px; /* Rounded button */
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #d35400; /* Darker orange on hover */
+}
+
+.register-link {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.register-link a {
+  color: #e67e22; /* Orange link */
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Dashboard Styles */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.sidebar {
+  background-color: #333;
+  color: #fff;
+  width: 250px;
+  padding: 1rem; /* Reduced padding */
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 0.5rem; /* Reduced margin */
+}
+
+.sidebar-nav a {
+  color: #fff;
+  text-decoration: none;
+  display: flex; /* Use flexbox for icon alignment */
+  align-items: center; /* Vertically center icon and text */
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+  background-color: #444;
+}
+
+.sidebar-nav a svg {
+  margin-right: 0.5rem; /* Space between icon and text */
+}
+
+.sidebar-user {
+  margin-top: auto; /* Push user section to the bottom */
+  text-align: center;
+  padding-top: 1rem; /* Add padding */
+  border-top: 1px solid #444; /* Add a separator */
+}
+
+.sidebar-user-avatar {
+  width: 40px; /* Smaller avatar */
+  height: 40px;
+  border-radius: 50%;
+  background-color: #555;
+  margin: 0 auto 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem; /* Smaller font size */
+}
+
+.sidebar-user-email {
+  font-size: 0.7rem; /* Smaller font size */
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.logout-button {
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.logout-button:hover {
+  background-color: #d35400;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #222;
+  color: #fff;
+}
+
+.top-bar {
+  background-color: #333;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #eee;
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center
+}
+
+.top-bar-date {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-left: 1rem;
+}
+
+.top-bar-fullscreen {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #eee;
+}
+
+.dashboard-content {
+  padding: 1rem;
+  flex: 1; /* Fill remaining space */
+  overflow-y: auto; /* Add scroll if content overflows */
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack content vertically */
+}
+
+.card-icon {
+  font-size: 1.5rem;
+  color: #e67e22; /* Orange icon */
+  margin-bottom: 0.5rem;
+}
+
+.card-title {
+  font-size: 1rem;
+  color: #eee;
+  margin-bottom: 0.25rem;
+}
+
+.card-subtitle {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.card-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: auto; /* Push value to the bottom */
+}
+
+.card-subvalue {
+    font-size: 0.8rem;
+    color: #ccc
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .sidebar-nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .sidebar-nav li {
+    margin-bottom: 0;
+  }
+
+  .sidebar-user {
+    display: none; /* Hide user section on small screens */
+  }
+
+  .top-bar {
+        flex-direction: column;
+        align-items: flex-start
+  }
+
+  .top-bar-right {
+        margin-top: 0.5rem;
+  }
+}
